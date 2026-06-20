@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowledge Hub - Educational Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-brain"></i>
+                <span>Knowledge Hub</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#upload" class="nav-link">Upload Notes</a></li>
+                <li><a href="#notes" class="nav-link">Browse</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Welcome to <span class="highlight">Knowledge Hub</span></h1>
+            <p class="hero-subtitle">Your Gateway to Quality Educational Resources</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="scrollToSection('upload')">
+                    Upload Notes
+                </button>
+                <button class="btn btn-secondary" onclick="scrollToSection('notes')">
+                    Browse Notes
+                </button>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="floating-card">
+                <i class="fas fa-book"></i>
+            </div>
+            <div class="floating-card card-2">
+                <i class="fas fa-pen-fancy"></i>
+            </div>
+            <div class="floating-card card-3">
+                <i class="fas fa-graduation-cap"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <h2>Why Choose Knowledge Hub?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                </div>
+                <h3>Easy Upload</h3>
+                <p>Upload your notes in seconds with our simple and intuitive interface</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <h3>Smart Search</h3>
+                <p>Find exactly what you need with powerful search and filter options</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-share-alt"></i>
+                </div>
+                <h3>Easy Sharing</h3>
+                <p>Share your knowledge with students around the world instantly</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Secure Storage</h3>
+                <p>Your notes are safely stored and protected with encryption</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3>Mobile Friendly</h3>
+                <p>Access your notes anytime, anywhere on any device</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <h3>Quality Content</h3>
+                <p>Curated notes from educators and subject matter experts</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upload Notes Section -->
+    <section id="upload" class="upload-section">
+        <div class="container">
+            <h2>Upload Your Notes</h2>
+            <p class="section-subtitle">Share your knowledge and help others learn</p>
+            
+            <div class="upload-container">
+                <form id="uploadForm" class="upload-form">
+                    <div class="form-group">
+                        <label for="title">Note Title *</label>
+                        <input type="text" id="title" name="title" placeholder="Enter note title" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Select a subject</option>
+                            <option value="Mathematics">Mathematics</option>
+                            <option value="Science">Science</option>
+                            <option value="History">History</option>
+                            <option value="Literature">Literature</option>
+                            <option value="Physics">Physics</option>
+                            <option value="Chemistry">Chemistry</option>
+                            <option value="Biology">Biology</option>
+                            <option value="Programming">Programming</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea id="description" name="description" placeholder="Describe your notes..." rows="4"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="file">Upload File *</label>
+                        <div class="file-input-wrapper">
+                            <input type="file" id="file" name="file" accept=".pdf,.doc,.docx,.txt,.pptx" required>
+                            <div class="file-input-label">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <span>Click to upload or drag and drop</span>
+                                <small>PDF, DOC, DOCX, TXT, PPTX (Max 10MB)</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="category">Category</label>
+                        <input type="text" id="category" name="category" placeholder="e.g., Chapter 5, Semester 1">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large">
+                        <i class="fas fa-upload"></i> Upload Notes
+                    </button>
+                </form>
+
+                <div class="upload-info">
+                    <div class="info-card">
+                        <i class="fas fa-lightbulb"></i>
+                        <h4>Pro Tips</h4>
+                        <ul>
+                            <li>Use clear, descriptive titles</li>
+                            <li>Add relevant tags for better discovery</li>
+                            <li>Include a brief description</li>
+                            <li>Ensure your notes are well-organized</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Browse Notes Section -->
+    <section id="notes" class="notes-section">
+        <div class="container">
+            <h2>Browse Notes</h2>
+            <p class="section-subtitle">Explore thousands of study materials</p>
+
+            <!-- Search and Filter -->
+            <div class="search-filter">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Search notes...">
+                </div>
+                <select id="filterSubject">
+                    <option value="">All Subjects</option>
+                    <option value="Mathematics">Mathematics</option>
+                    <option value="Science">Science</option>
+                    <option value="History">History</option>
+                    <option value="Literature">Literature</option>
+                    <option value="Physics">Physics</option>
+                    <option value="Chemistry">Chemistry</option>
+                    <option value="Biology">Biology</option>
+                    <option value="Programming">Programming</option>
+                </select>
+            </div>
+
+            <!-- Notes Grid - THIS IS THE IMPORTANT ONE -->
+            <div class="notes-grid" id="notesGrid">
+                <!-- Notes will be dynamically inserted here -->
+            </div>
+
+            <div id="noNotes" class="no-notes">
+                <i class="fas fa-inbox"></i>
+                <p>No notes found. Be the first to upload!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <p class="section-subtitle">We'd love to hear from you</p>
+
+            <div class="contact-content">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-large">Send Message</button>
+                </form>
+
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>123 Education Street, Learning City</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@kn*
+
